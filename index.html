@@ -6,10 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Weather App</title>
     <link rel="stylesheet" href="style.css">
-    <script type="module" src="main.js"></script>
+    <script type="module" defer src="main.js"></script>
 </head>
 <body>
     <div class="header">
+        <button id="toggle-temp" class="far">C&deg | F&deg</button>
         <input id="searchBar" type="text" placeholder="Enter City Name:">
         <button id="searchBtn">Search</button>
     </div>
@@ -19,15 +20,15 @@
 
         <div class="main-info">
             <div id="city-name">
-                <p>Mostly Sunny</p>
-                <h2>London, UK</h2>
+                <p id="conditions"></p>
+                <h2 id="location"></h2>
             </div>
             <div id="weather-info">
-                <div class="degrees" style="font-size: 14em;">69&deg</div>
+                <div id="degrees" style="font-size: 14em;"></div>
                 <div style="align-items: flex-start; margin-left: 8%;">
-                    <p>Feels Like:</p>
-                    <p>Wind:</p>
-                    <p>Humidity:</p>
+                    <p id="feels_like"></p>
+                    <p id="wind"></p>
+                    <p id="humidity"></p>
                 </div>
             </div>
         </div>
