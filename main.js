@@ -7,6 +7,10 @@ let locationName = "London";
 let currentObj = await getWeatherDataF(locationName);
 let newObject = {};
 
+console.log(input);
+console.log(searchBtn)
+console.log(toggleBtn)
+
 async function getWeatherDataF(locationName) {
     const response = await fetch('https://api.openweathermap.org/data/2.5/weather?q=' + locationName + '&APPID=bbe781ed4570308e5b1e9e823fab064d&units=imperial');
     const data = await response.json();
@@ -22,7 +26,6 @@ async function getWeatherDataC(locationName) {
 }
 
 async function searchAndUpdate() {
-    locationName = input.value;
     if (toggleBtn.classList.contains('far')) {
         currentObj = await getWeatherDataF(locationName);
         updateObject(currentObj, newObject);
@@ -37,15 +40,25 @@ async function searchAndUpdate() {
 }
 
 function updateObject(originalObj, updatedObject) {
+    // left box
     updatedObject.name = originalObj.name + ', ' + originalObj.sys.country;
     updatedObject.temp = Math.trunc(originalObj.main.temp);
     updatedObject.feels_like = Math.trunc(originalObj.main.feels_like);
     updatedObject.wind_speed = originalObj.wind.speed;
     updatedObject.humidity = originalObj.main.humidity;
     updatedObject.conditions = originalObj.weather[0].main;
+
+    // right box
+    updatedObject.high = Math.trunc(originalObj.main.temp_max);
+    updatedObject.low = Math.trunc(originalObj.main.temp_min);
+    updatedObject.sunrise = originalObj.sys.sunrise;
+    updatedObject.sunset = originalObj.sys.sunset;
+    updatedObject.visibility = originalObj.visibility;
+    updatedObject.pressure = originalObj.main.pressure;
+
 }
 
-searchBtn.onclick = searchAndUpdate;
+searchBtn.onclick = () => { locationName = input.value; searchAndUpdate() };
 
 toggleBtn.onclick = async function () {
     if (toggleBtn.classList.contains('far')) {
@@ -59,6 +72,9 @@ toggleBtn.onclick = async function () {
     searchAndUpdate();
 }
 
+updateObject(currentObj, newObject);
+updateHTML(newObject, "MPH")
+console.log(currentObj);
 
 
 
