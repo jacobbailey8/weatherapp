@@ -1,6 +1,6 @@
 * {
     margin: 0;
-
+    font-family: 'Montserrat', sans-serif;
 }
 
 body {
@@ -8,7 +8,7 @@ body {
     width: 100vw;
     padding: 0;
     margin: 0;
-    background-image: url('./clearSky.jpeg');
+    /* background-image: url('./clearSky.jpeg'); */
     background-size: cover;
 
 }
