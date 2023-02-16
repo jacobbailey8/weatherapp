@@ -18,7 +18,7 @@ function updateHTML(obj, wind_unit) {
 
 
     // left box
-    conditions_box.innerHTML = obj.conditions;
+    conditions_box.innerHTML = '<i class="bi bi-cloud-fill"></i> ' + obj.conditions;
     location_box.innerHTML = obj.name;
     degrees_box.innerHTML = obj.temp + '&deg';
     feels_like_box.innerHTML = 'Feels Like: ' + obj.feels_like + '&deg';
