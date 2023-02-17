@@ -37,3 +37,14 @@ body {
 #second-contain {
     opacity: 0.7;
 }
+
+.table-responsive {
+    opacity: 0.7;
+}
+
+td {
+    color: white;
+    text-align: center;
+    min-width: 300px;
+    font-size: 2em;
+}

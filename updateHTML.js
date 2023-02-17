@@ -1,4 +1,6 @@
-function updateHTML(obj, wind_unit) {
+import createTable from "./createTable.js";
+
+async function updateHTML(obj, wind_unit, unit) {
 
     // set conditions icon
     let icon;
@@ -64,6 +66,8 @@ function updateHTML(obj, wind_unit) {
     sunset.innerHTML = '<i class="bi bi-sunset-fill"></i> &nbspSunset: ' + sunsetVal.slice(0, sunsetVal.length - 6) + sunsetVal.slice(sunsetVal.length - 3);
     visibility.innerHTML = 'Visibility: ' + obj.visibility + ' m';
     pressure.innerHTML = 'Pressure: ' + obj.pressure + ' hPa';
+
+    await createTable(obj, unit);
 
 }
 
