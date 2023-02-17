@@ -79,14 +79,11 @@ toggleBtn.onclick = async function () {
         toggleBtn.classList.add('far');
         toggleBtn.classList.remove('cel');
     }
-
-
     searchAndUpdate();
 }
 
 updateObject(currentObj, newObject);
 await updateHTML(newObject, "MPH", 'imperial')
-console.log(currentObj);
 
 
 

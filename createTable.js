@@ -8,9 +8,9 @@ export default async function createTable(obj, unit) {
     const row3 = document.createElement('tr');
     table.appendChild(row3);
 
+
     let resp = await fetch(`https://api.openweathermap.org/data/2.5/forecast?lat=${obj.lat}&lon=${obj.lon}&appid=${API_KEY}&units=${unit}`);
     let data = await resp.json();
-    console.log(data);
 
     // main loop
     for (let i = 0; i < 16; i++) {
@@ -18,8 +18,6 @@ export default async function createTable(obj, unit) {
         // get time
         let time = new Date(data.list[i].dt * 1000);
         let timeConverted = time.toLocaleTimeString("en-US");
-
-
 
         let hour = document.createElement('td');
         hour.innerHTML = timeConverted.slice(0, timeConverted.length - 9) + timeConverted.slice(timeConverted.length - 3);
