@@ -13,7 +13,7 @@ export default async function createTable(obj, unit) {
     console.log(data);
 
     // main loop
-    for (let i = 0; i < 8; i++) {
+    for (let i = 0; i < 16; i++) {
 
         // get time
         let time = new Date(data.list[i].dt * 1000);

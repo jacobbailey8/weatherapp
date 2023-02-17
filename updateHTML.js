@@ -2,28 +2,43 @@ import createTable from "./createTable.js";
 
 async function updateHTML(obj, wind_unit, unit) {
 
-    // set conditions icon
+    // set conditions icon and background image
     let icon;
+    let body = document.querySelector('body');
     switch (obj.conditions.toUpperCase()) {
         case 'CLOUDS':
+            body.className = '';
+            body.classList.add('bg-clouds')
             icon = '<i class="bi bi-cloud-fill"></i> ';
             break;
         case 'RAIN':
+            body.className = '';
+            body.classList.add('bg-rain')
             icon = '<i class="bi bi-cloud-rain-fill"></i> ';
             break;
         case 'CLEAR':
+            body.className = '';
+            body.classList.add('bg-clear')
             icon = '<i class="bi bi-circle-fill"></i> ';
             break;
         case 'THUNDERSTORM':
+            body.className = '';
+            body.classList.add('bg-storm')
             icon = '<i class="bi bi-cloud-lightning-rain-fill"></i> ';
             break;
         case 'DRIZZLE':
+            body.className = '';
+            body.classList.add('bg-drizzle')
             icon = '<i class="bi bi-cloud-drizzle-fill"></i> ';
             break;
         case 'SNOW':
+            body.className = '';
+            body.classList.add('bg-snow')
             icon = '<i class="bi bi-cloud-snow-fill"></i> ';
             break;
         default:
+            body.className = '';
+            body.classList.add('bg-mist')
             icon = '<i class="bi bi-cloud-fog2-fill"></i> '
     }
 

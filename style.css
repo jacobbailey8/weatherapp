@@ -1,10 +1,16 @@
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 350px) {
     .extra-info {
         font-size: 70%;
     }
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 350px) {
+    .extra-info {
+        font-size: 1rem;
+    }
+}
+
+@media screen and (min-width: 565px) {
     .extra-info {
         font-size: 1.5rem;
     }
@@ -20,9 +26,38 @@ body {
     width: 100vw;
     padding: 0;
     margin: 0;
-    background-image: url('./cloudy.jpeg');
+    background-repeat: repeat;
     background-size: cover;
 
+}
+
+.bg-clear {
+    background-image: url('clearSky.jpeg');
+}
+
+.bg-rain {
+    background-image: url('https://as1.ftcdn.net/v2/jpg/02/99/07/08/1000_F_299070812_UomjROdeqrASEiCWsAlSG7ygqiYXH78b.jpg');
+    ;
+}
+
+.bg-storm {
+    background-image: url('https://media1.giphy.com/media/3oz8xuDgwvlM6TXMRi/giphy.gif?cid=ecf05e476r8rvqh6ddhmxkwdxv6cogtnbx6swyltzowqudvx&rid=giphy.gif&ct=g');
+}
+
+.bg-snow {
+    background-image: url('https://media4.giphy.com/media/Xi2Xu0MejhsUo/giphy.gif?cid=ecf05e47m5iakaswwuh6rb4504vufuoa8z1s7ee8o0s8y6oq&rid=giphy.gif&ct=g');
+}
+
+.bg-drizzle {
+    background-image: url('https://media1.giphy.com/media/xTcnT8PuKl5GBz26mk/giphy.gif?cid=ecf05e47nyu522swszegfbhzokenls59inx08mpk166ynqz7&rid=giphy.gif&ct=g');
+}
+
+.bg-clouds {
+    background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRZFK53MXTudT1vbxHR65tbe-hH2a_09_54yRRRO0CB0g&s');
+}
+
+.bg-mist {
+    background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ_r68fjV-1y6_DhZ-80W0OB5A9grVz6NfbcQ&usqp=CAU');
 }
 
 #main {
@@ -45,6 +80,10 @@ body {
 td {
     color: white;
     text-align: center;
-    min-width: 300px;
+    min-width: 200px;
     font-size: 2em;
+}
+
+table {
+    min-height: 35vh;
 }
