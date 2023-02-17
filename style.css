@@ -1,10 +1,10 @@
-@media screen and (max-width: 350px) {
+@media screen and (max-width: 450px) {
     .extra-info {
         font-size: 70%;
     }
 }
 
-@media screen and (min-width: 350px) {
+@media screen and (min-width: 450px) {
     .extra-info {
         font-size: 1rem;
     }
