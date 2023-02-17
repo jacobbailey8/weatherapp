@@ -2,6 +2,10 @@
     .extra-info {
         font-size: 85%;
     }
+
+    td {
+        width: 33% !important;
+    }
 }
 
 @media screen and (min-width: 450px) {
